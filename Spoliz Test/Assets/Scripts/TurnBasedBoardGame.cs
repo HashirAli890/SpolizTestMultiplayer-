@@ -60,6 +60,7 @@ public class TurnBasedBoardGame : MonoBehaviourPunCallbacks
         if (playerActorNumber != expectedPlayer)
         {
             statusText.text = "Not your turn!";
+            Handheld.Vibrate();
             return;
         }
 
@@ -70,6 +71,7 @@ public class TurnBasedBoardGame : MonoBehaviourPunCallbacks
         else
         {
             statusText.text = "Invalid move!";
+            Handheld.Vibrate();
         }
     }
 
